@@ -1,0 +1,29 @@
+{% load static %}
+<!-- Fixed navbar -->
+<div class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <!-- Button for smallest screens -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span
+                    class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            <a class="navbar-brand" href="/">
+                <strong> <h3>Online Lab Exam </h3> </strong>
+            </a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <br>
+            <ul class="nav navbar-nav pull-right mainNav">
+                <li class="active"><a href="/">Home</a></li>
+
+                <li><a href="{% url 'course' %}">Courses</a></li>
+                <li><a href="{% url 'exam' %}">Exams</a></li>
+
+                 <li><a href="price.html">Registration</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+
+</div>
