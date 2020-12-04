@@ -13,10 +13,11 @@ from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
 
 
+# STUDENT REGISTRATION VIEW
 class RegisterStudentView(CreateView):
     model = User
     form_class = StudentRegistrationForm
-    template_name = ''
+    template_name = 'authentication/student/register.html'
     success_url = '/'
 
     extra_context = {
@@ -37,15 +38,16 @@ class RegisterStudentView(CreateView):
             password = form.cleaned_data.get("password1")
             user.set_password(password)
             user.save()
-            return redirect('accounts:login')
+            return redirect('authentication:login')
         else:
-            return render(request, '', {'form': form})
+            return render(request, 'authentication/student/register.html', {'form': form})
 
 
+# STUDENT PROFILE EDIT VIEW
 class EditStudentProfileView(UpdateView):
     model = User
     form_class = StudentProfileUpdateForm
-    context_object_name = 'patient'
+    context_object_name = 'student'
     template_name = ''
     success_url = reverse_lazy('')
 
@@ -70,10 +72,11 @@ class EditStudentProfileView(UpdateView):
         return obj
 
 
+# REGISTER INSTRUCTOR VIEW
 class RegisterInstructorView(CreateView):
     model = User
     form_class = InstructorRegistrationForm
-    template_name = ''
+    template_name = 'authentication/instructor/register.html'
     success_url = '/'
 
     extra_context = {
@@ -94,11 +97,12 @@ class RegisterInstructorView(CreateView):
             password = form.cleaned_data.get("password1")
             user.set_password(password)
             user.save()
-            return redirect('accounts:login')
+            return redirect('authentication:login')
         else:
-            return render(request, '', {'form': form})
+            return render(request, 'authentication/instructor/register.html', {'form': form})
 
 
+# INSTRUCTOR PROFILE EDIT VIEW
 class EditInstructorProfileView(UpdateView):
     model = User
     form_class = InstructorRegistrationForm
@@ -106,7 +110,7 @@ class EditInstructorProfileView(UpdateView):
     template_name = ''
     success_url = reverse_lazy('accounts:doctor-profile-update')
 
-    @method_decorator(login_required(login_url=reverse_lazy('accounts:login')))
+    @method_decorator(login_required(login_url=reverse_lazy('authentication:login')))
     @method_decorator(user_is_instructor)
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(self.request, *args, **kwargs)
@@ -127,10 +131,8 @@ class EditInstructorProfileView(UpdateView):
         return obj
 
 
+# LOGIN VIEW FOR BOTH USER
 class LoginView(FormView):
-    """
-        Provides the ability to login as a user with an email and password
-    """
     success_url = '/'
     form_class = UserLoginForm
     template_name = 'authentication/login.html'
@@ -162,10 +164,8 @@ class LoginView(FormView):
         return self.render_to_response(self.get_context_data(form=form))
 
 
+# LOGOUT VIEW
 class LogoutView(RedirectView):
-    """
-        Provides users the ability to logout
-    """
     url = '/login'
 
     def get(self, request, *args, **kwargs):

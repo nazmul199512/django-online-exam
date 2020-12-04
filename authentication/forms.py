@@ -5,6 +5,7 @@ from django.contrib.auth.forms import UserCreationForm
 from .models import User
 
 
+# STUDENT REGISTRATION FORM
 class StudentRegistrationForm(UserCreationForm):
 
     def __init__(self, *args, **kwargs):
@@ -67,6 +68,7 @@ class StudentRegistrationForm(UserCreationForm):
         return user
 
 
+# INSTRUCTOR REGISTRATION FORM
 class InstructorRegistrationForm(UserCreationForm):
 
     def __init__(self, *args, **kwargs):
@@ -126,6 +128,7 @@ class InstructorRegistrationForm(UserCreationForm):
         return user
 
 
+# LOGIN FORM FOR BOTH USER
 class UserLoginForm(forms.Form):
     email = forms.EmailField()
     password = forms.CharField(
@@ -160,6 +163,7 @@ class UserLoginForm(forms.Form):
         return self.user
 
 
+# STUDENT PROFILE UPDATE FORM
 class StudentProfileUpdateForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
@@ -185,6 +189,7 @@ class StudentProfileUpdateForm(forms.ModelForm):
         fields = ["first_name", "last_name", "email"]
 
 
+# INSTRUCTOR PROFILE UPDATE FORM
 class InstructorProfileUpdateForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):

@@ -1,7 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61957671-305b-40dc-b2b1-5fd05f3ab937" name="Default Changelist" comment="" />
+    <list default="true" id="61957671-305b-40dc-b2b1-5fd05f3ab937" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/authentication/instructor/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/authentication/student/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/decorators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_exam/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_exam/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_exam/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_exam/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/camera.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/isotope.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/about.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/arrows.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/bg_header.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/blank.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/camera-loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/camera_skins.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/news2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/news3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/news4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/photo-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/photo-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/photo-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/photo-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/playbutton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/portfolio/img1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/portfolio/img2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/portfolio/img3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/portfolio/img4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/portfolio/img5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/portfolio/img6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/portfolio/img7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/portfolio/img8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/portfolio/img9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/post_01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/slides/_notes/dwsync.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/slides/img1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/slides/img2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/slides/img3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/slides/thumbs/_notes/dwsync.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/slides/thumbs/big_bunny_fake.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/slides/thumbs/bridge.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/slides/thumbs/header_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/slides/thumbs/leaf.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/slides/thumbs/road.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/slides/thumbs/sea.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/slides/thumbs/shelter.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/slides/thumbs/tree.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/camera.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/fancybox/Descr.WD3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/fancybox/blank.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/fancybox/fancybox_loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/fancybox/fancybox_loading_402x.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/fancybox/fancybox_overlay.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/fancybox/fancybox_sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/fancybox/fancybox_sprite_402x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/fancybox/jquery.fancybox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/fancybox/jquery.fancybox.pack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/google-map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/html5shiv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/jquery.cslider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/jquery.easing.1.3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/jquery.isotope.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/jquery.mobile.customized.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/modernizr-latest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/respond.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/authentication/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/authentication/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/core/courses.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/courses.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nav.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +111,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1l9VLUFiWdENBMmK1j2Q2VYCjSx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -25,13 +125,14 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Nazmul\PycharmProject\lab_exam" />
       <recent name="C:\Users\Nazmul\PycharmProject\lab_exam\static" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Nazmul\PycharmProject\lab_exam\static" />
     </key>
   </component>
@@ -70,11 +171,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607009238762</updated>
-      <workItem from="1607009519125" duration="14940000" />
+      <workItem from="1607009519125" duration="16350000" />
+      <workItem from="1607085790031" duration="12424000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1957" y="302" key="com.intellij.ide.util.TipDialog" timestamp="1607085858273">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1957" y="302" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1607085858273" />
   </component>
 </project>

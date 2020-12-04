@@ -3,17 +3,14 @@ from django.db import models
 
 from .managers import UserManager
 
-GENDER_CHOICES = (
-    ('male', 'Male'),
-    ('female', 'Female'))
 
-
+# CUSTOM USER MODEL
 class User(AbstractUser):
     username = None
     role = models.CharField(max_length=12, error_messages={
         'required': "Role must be provided"
     })
-    gender = models.CharField(max_length=10, blank=True, null=True, default="")
+
     email = models.EmailField(unique=True, blank=False,
                               error_messages={
                                   'unique': "A user with that email already exists.",
