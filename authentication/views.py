@@ -48,8 +48,8 @@ class EditStudentProfileView(UpdateView):
     model = User
     form_class = StudentProfileUpdateForm
     context_object_name = 'student'
-    template_name = ''
-    success_url = reverse_lazy('')
+    template_name = 'authentication/student/edit-profile.html'
+    success_url = reverse_lazy('authentication:student-profile-update')
 
     @method_decorator(login_required(login_url=reverse_lazy('accounts:login')))
     @method_decorator(user_is_student)
@@ -105,10 +105,10 @@ class RegisterInstructorView(CreateView):
 # INSTRUCTOR PROFILE EDIT VIEW
 class EditInstructorProfileView(UpdateView):
     model = User
-    form_class = InstructorRegistrationForm
+    form_class = InstructorProfileUpdateForm
     context_object_name = 'instructor'
-    template_name = ''
-    success_url = reverse_lazy('accounts:doctor-profile-update')
+    template_name = 'authentication/instructor/edit-profile.html'
+    success_url = reverse_lazy('authentication:instructor-profile-update')
 
     @method_decorator(login_required(login_url=reverse_lazy('authentication:login')))
     @method_decorator(user_is_instructor)

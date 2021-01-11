@@ -68,58 +68,27 @@
             </div>
 
             <div class="row">
+          {% for course in course %}
+        <!-- Single Dentist Area -->
+        <div class="col-12 col-sm-6 col-md-4">
+
+          <div class="single-dentist-area mb-100">
+            <img  style="height: 300px; width: 500px " src="{{ course.course_image.url }}" alt="">
+            <!-- Dentist Content -->
+            <div class="dentist-content">
+              <!-- Social Info -->
+              <div class="dentist-social-info">
+
+              </div>
+              <!-- Dentist Info -->
+              <div class="dentist-info bg-gradient-overlay">
+                <h5>{{ course.course_name }} |  <a href="{% url 'core:course-view' course.id %}"> <small>VIEW COURSE</small></a> </h5>
+                <p>{{ course.teacher_name }} </p>
 
 
-                {% for apt in home %}
-                    <!-- Single Dentist Area -->
-                    <div class="col-12 col-sm-6 col-md-4">
-                        <div class="single-dentist-area mb-100">
-                            <img style="height: 500px; width: 600px" src="{{ apt.image.url }}" alt="">
-                            <!-- Dentist Content -->
-                            <div class="dentist-content">
-                                <!-- Social Info -->
-                                <div class="dentist-social-info">
-
-                                </div>
-                                <!-- Dentist Info -->
-                                <div class="dentist-info bg-gradient-overlay">
-                                    {% if request.user.is_authenticated and request.user.role == 'patient' %}
-                                        <h5>{{ apt.full_name }}</h5>
-                                        <p>{{ apt.department }} Expert</p>
-                                        <p>{{ apt.qualification_name }}, {{ apt.institute_name }}</p>
-                                        <p>Available {{ apt.start_time }} to {{ apt.end_time }}
-                                            in {{ apt.hospital_name }}</p>
-                                        <p>
-                                            AT {{ apt.location }} <i class="fa fa-th"></i>
-                                            <a href=""> Take
-                                                Appointment</a>
-
-                                        </p>
-                                    {% elif request.user.is_authenticated and request.user.role == 'doctor'   %}
-
-                                        <h5>{{ apt.full_name }}</h5>
-                                        <p>{{ apt.department }} Expert</p>
-                                        <p>{{ apt.qualification_name }}, {{ apt.institute_name }}</p>
-                                        <p>Available {{ apt.start_time }} to {{ apt.end_time }}
-                                            in {{ apt.hospital_name }}</p>
-                                        <p>AT {{ apt.location }}</p>
-
-                                        {% else %}
-
-                                         <h5>{{ apt.full_name }}</h5>
-                                        <p>{{ apt.department }} Expert</p>
-                                        <p>{{ apt.qualification_name }}, {{ apt.institute_name }}</p>
-                                        <p>Available {{ apt.start_time }} to {{ apt.end_time }}
-                                            in {{ apt.hospital_name }}</p>
-                                        <p>
-                                            AT {{ apt.location }} </p>
-
-
-                                    {% endif %}
-
-                                </div>
-                            </div>
-                        </div>
+              </div>
+            </div>
+          </div>
                     </div>
                 {% endfor %}
 

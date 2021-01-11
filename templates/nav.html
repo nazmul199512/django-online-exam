@@ -76,10 +76,6 @@
 
                                 <li><a href="/">Home</a></li>
 
-
-                                <li><a href="{% url 'core:course' %}">Courses</a></li>
-
-
                                 {% if request.user.is_authenticated and request.user.role == 'instructor' %}
 
                                     <li>
@@ -89,10 +85,11 @@
                                             </span>
                                         </a>
                                         <ul class="dropdown">
-                                            <li><a href=""> Edit Profile</a></li>
-                                            <li><a href=""> Students</a></li>
-                                            <li><a href="">  Classes</a></li>
-                                            <li><a href=""> Create Exams</a></li>
+                                            <li><a href="{% url 'authentication:instructor-profile-update' %}"> Edit Profile</a></li>
+                                            <li><a href="{% url 'core:course' %}">Courses</a></li>
+                                            <li><a href="{% url 'core:course-create' %}"> Create Course</a></li>
+                                            <li><a href="{% url 'core:exam-submission-list' %}"> Exam Submissions</a></li>
+                                            <li><a href="{% url 'core:assignment-submission-list' %}"> Assignment Submissions</a></li>
                                             <li><a href="{% url 'authentication:logout' %}"> Logout</a></li>
 
                                         </ul>
@@ -100,6 +97,8 @@
 
 
                              {% elif request.user.is_authenticated and request.user.role == 'student' %}
+                                     <li><a href="{% url 'core:course' %}">Courses</a></li>
+
                                     <li>
                                         <a href="">
                                             <span class="glyphicon glyphicon-user">
@@ -108,7 +107,7 @@
                                         </a>
                                         <ul class="dropdown">
 
-                                            <li><a href=""> Edit Profile</a></li>
+                                            <li><a href="{% url 'authentication:student-profile-update' %}"> Edit Profile</a></li>
                                             <li><a href="{% url 'authentication:logout' %}"> Logout</a></li>
 
                                         </ul>
@@ -117,7 +116,7 @@
 
 
 
-                              {% else %}
+                                {% else %}
                                     <li><a href="#">Register</a>
                                         <ul class="dropdown">
                                             <li><a href="{% url 'authentication:instructor-register' %}"> INSTRUCTOR</a></li>

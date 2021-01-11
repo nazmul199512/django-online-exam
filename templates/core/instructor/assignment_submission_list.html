@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Assignments{% endblock %}
+
+
+{% block content %}
+
+    <div class="container">
+
+        <div class="col-12 col-sm-6 col-md-10">
+                    <strong><h3>Assignments</h3></strong>
+        <hr/>
+            {% for foo in assignment_submission %}
+
+
+                <p> <h4>Name</h4> {{ foo.name }} </p>
+
+                <p> <h4>Id</h4> {{ foo.university_id }} </p>
+                <hr/>
+                <p> <h4>Answer</h4> {{ foo.content }}  </p>
+
+                <br/>
+                <a href="{% url 'core:assignment-submission-delete' foo.id %}">Delete Assignment</a>
+                  <hr/>
+            {% endfor %}
+
+
+
+
+            <br/>
+
+
+            <br/>
+
+
+        </div>
+
+    </div>
+
+{% endblock %}

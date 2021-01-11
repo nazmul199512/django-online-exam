@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Exams{% endblock %}
+
+
+{% block content %}
+
+    <div class="container">
+
+        <div class="col-12 col-sm-6 col-md-10">
+            {% if request.user.is_authenticated and request.user.role == 'instructor' %}
+                {% for foo in exam %}
+                    <h3><strong> {{ foo.title }}  </strong></h3>
+                    <hr/>
+                    <p> <h4>Content</h4> {{ foo.content }} </p>
+                    <br/>
+                    <p> <h4>Marks</h4> {{ foo.marks }} </p>
+
+                    <p> <h4>Time</h4> {{ foo.duration }} hours </p>
+                    <a href="{% url 'core:delete-exam' foo.id %}">Delete Exam</a>
+                {% endfor %}
+                <hr/>
+                <h4><a href="{% url 'core:exam-create' %}">Create a Exam</a></h4>
+
+                <br/>
+            {% else %}
+
+
+                {% for foo in exam %}
+                    <h3><strong> {{ foo.title }}  </strong></h3>
+                    <hr/>
+                    <p> <h4>Content</h4> {{ foo.content }} </p>
+                    <br/>
+                    <p> <h4>Marks</h4> {{ foo.marks }} </p>
+
+                    <p> <h4>Time</h4> {{ foo.duration }} hours </p>
+                     <br/>
+                   <h4><a href="{% url 'core:exam-submission' %}">Submit Exam Paper</a></h4>
+                       <hr/>
+                {% endfor %}
+
+
+
+                <br/>
+
+            {% endif %}
+        </div>
+
+    </div>
+
+{% endblock %}
